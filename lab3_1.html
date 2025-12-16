@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Нталія ПП-23</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+    const days = [
+        "Неділя",
+        "Понеділок",
+        "Вівторок",
+        "Середа",
+        "Четвер",
+        "П’ятниця",
+        "Субота"
+    ];
+
+    const sizes = [32, 20, 22, 24, 26, 28, 30];
+    const colors = ["darkcyan", "red", "orange", "green", "blue", "purple", "brown"];
+
+    let today = new Date();
+    let dayIndex = today.getDay();
+
+    function weekDay(size, day, color) {
+
+        document.write(
+            "<p style='font-size:" + size + "px; color:" + color + ";'>" +
+            "Сьогодні: <strong>" + day + "</strong>" +
+            "</p>"
+        );
+
+        alert("Сьогодні " + day);
+        console.log("Сьогодні день тижня:", day);
+    }
+
+    weekDay(sizes[dayIndex], days[dayIndex], colors[dayIndex]);
+
+</script>
+
+<button onclick="location.href='index.html'">
+    Повернутися до головної сторінки
+</button>
+
+</body>
+</html>
