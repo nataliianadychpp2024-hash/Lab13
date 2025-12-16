@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>    
+<body>
+<script>
+"use strict";
+function findRadius(area) {
+    return Math.sqrt(area / Math.PI);
+}
+
+
+function diameter(radiusFunc, area) {
+    let radius = radiusFunc(area);
+    return 2 * radius;
+}
+
+let circleArea = 34;
+
+let circleDiameter = diameter(findRadius, circleArea);
+
+document.write("<h2>Площа кола: " + circleArea + "</h2>");
+document.write("<h2>Радіус кола: " + findRadius(circleArea).toFixed(2) + "</h2>");
+document.write("<h2>(Передана функція Радіус)Діаметр кола: " + circleDiameter.toFixed(2) + "</h2>");
+
+</script>
+<button onclick="location.href='index.html'">
+    Повернутися до головної сторінки
+</button>
+</body>
+</html>
